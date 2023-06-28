@@ -25,6 +25,16 @@ joblist=[
       'id':5,
       'tittle':'CEO',
       'salary':'5,00,000'
+    },
+    {
+      'id':6,
+      'tittle':'Engineer',
+      'salary':'1,00,000'
+    },
+    {
+      'id':7,
+      'tittle':'Product Management',
+      'salary':'2,00,000'
     }
 ]
 @app.route('/')
