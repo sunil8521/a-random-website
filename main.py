@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,jsonify
 app=Flask(__name__,template_folder='temp')
 joblist=[
     {
@@ -30,5 +30,9 @@ joblist=[
 @app.route('/')
 def hell():
   return render_template('home.html',job=joblist,sitename='jobdekho.com')
+
+@app.route('/api/joblist')
+def jobs():
+  return jsonify(joblist)
 if __name__=="__main__":
   app.run(host='0.0.0.0',debug=True)
