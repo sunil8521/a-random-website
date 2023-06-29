@@ -1,5 +1,5 @@
 from flask import Flask, render_template,jsonify
-app=Flask(__name__,template_folder='temp')
+app=Flask(__name__,template_folder='all_details')
 joblist=[
     {
       'id':1,
@@ -33,13 +33,13 @@ joblist=[
     },
     {
       'id':7,
-      'tittle':'Product Management',
+      'tittle':'Produc Management',
       'salary':'2,00,000'
     }
 ]
 @app.route('/')
 def hell():
-  return render_template('home.html',job=joblist,sitename='jobdekho.com')
+  return render_template('home.html',job=joblist,sitename='job')
 
 @app.route('/api/joblist')
 def jobs():
