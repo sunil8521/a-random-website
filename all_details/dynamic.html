@@ -1,6 +1,6 @@
      <div class="dynamic p-3">
         <div class="border-bottom border-2 row">
-        <div class="col-10">
+        <div class="col-md-11">
         <h4>{{i['tittle']}}</h4>
           {%if 'salary' in i%}
           <b>salary:</b>{{i['salary']}}
@@ -8,8 +8,8 @@
           
        </div>
           
-        <div class=col-2>
-         <button class="btn btn-outline-secondary">Apply</button>
+        <div class="col-1 mt-2 mb-2">
+         <a href="mailto:heyitsmevro@gmail.com?subject=I%20want%20to%20apply%20for%20{{i['tittle']}}&body=Your%20name%3A%0D%0AYour%20resume%20link%3A%0D%0AYour%20linkedin%20link%3A" target="_blank"class="btn btn-outline-secondary">Apply</a>
         </div>
           
           </div>
