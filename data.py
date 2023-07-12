@@ -1,13 +1,13 @@
 import mysql.connector
 import os
 
-dataBase = mysql.connector.connect(
-    host=os.environ['host_key'],
-    user=os.environ['admin_key'],
-    passwd=os.environ['pass_key'],
-    database='newdb'
-)
 def store():
+    dataBase = mysql.connector.connect(
+        host=os.environ['host_key'],
+        user=os.environ['admin_key'],
+        passwd=os.environ['pass_key'],
+        database='newdb'
+)
     object = dataBase.cursor()
     query = "select * from jobs"
     object.execute(query)
