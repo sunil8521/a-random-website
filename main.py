@@ -1,43 +1,6 @@
 from flask import Flask, render_template,jsonify
-from data import store
+from data import store,by_id
 app=Flask(__name__,template_folder='all_details')
-# joblist=[
-#     {
-#       'id':1,
-#       'tittle':'web-devloper',
-#       'salary':'12,000'
-#     },
-#     {
-#       'id':2,
-#       'tittle':'data-scientist',
-#       'salary':'90,000'
-#     },
-#     {
-#       'id':3,
-#       'tittle':'software-devloper',
-#       'salary':'1,20,000'
-#     },
-#     {
-#       'id':4,
-#       'tittle':'hacker',
-#       'salary':'12,20,000'
-#     },
-#     {
-#       'id':5,
-#       'tittle':'CEO',
-#       'salary':'5,00,000'
-#     },
-#     {
-#       'id':6,
-#       'tittle':'Engineer',
-#       'salary':'1,00,000'
-#     },
-#     {
-#       'id':7,
-#       'tittle':'Product Management',
-#       'salary':'2,00,000'
-#     }
-# ]
 @app.route('/')
 def hell():
   joblist=store()
@@ -47,5 +10,12 @@ def hell():
 def jobs():
   joblist=store()
   return jsonify(joblist)
+
+@app.route("/jobs/<id>")
+def jobs_detail(id):
+  detail=by_id(id)
+  if not detail:
+    return render_template('error.html')
+  return render_template('detail.html',jobinfo=detail)
 if __name__=="__main__":
   app.run(host='0.0.0.0',debug=True)
