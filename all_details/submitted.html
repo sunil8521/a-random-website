@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>submited</title>
+  <style>
+    .main>div{
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+        .extra {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            margin-top:130px;
+        
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      {%include"header.html"%}
+      <img class="extra img-fluid" src="https://i.ibb.co/Kq0bHsk/marten-newhall-u-AFj-Fs-MS3-YY-unsplash.jpg"
+            alt="eric-prouzet-B3-UFXwc-Vbc4-unsplash" border="0">
+      <div class=mt-5>
+      <h1 style="text-align:center;font-family:cursive;">Application Submitted for "{{jobname.Tittle}}" !!</h1>
+        <div class="mb-3 main">
+          
+        <div class="mb-2" >
+        <h3 style="display:inline;">Name: </h3>
+      <h4 style="display:inline; font-family:contents;">{{persondata['full_name']}}</h4>
+        </div>
+          
+          <div class="mb-2">
+        <h3 style="display:inline; ">Email: </h3>
+      <h4 class="mb-4" style="display:inline; font-family:contents;">{{persondata['email']}}</h4>
+          </div>
+          <div class="mb-2">
+        <h3 style="display:inline;">Linked In: </h3>
+      <h4 class="mb-4" style="display:inline;" font-family:contents;>{{persondata['linkedin']}}</h4>
+          </div>
+          
+          <div class="mb-2">
+        <h3 style="display:inline;">Education: </h3>
+      <h4 class="mb-4" style="display:inline;" font-family:contents;>{{persondata['education']}}</h4>
+          </div>
+          
+          <div class="mb-2">
+        <h3 style="display:inline;">Work Experience: </h3>
+      <h4 class="mb-4" style="display:inline;" font-family:contents;>{{persondata['experience']}}</h4>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-3">
+            <button type="button" class="d-grid mx-auto btn btn-primary btn-lg"><a href="mailto:heyitsmevro@gmail.com?subject=Question%20about%20JOBDEKHO.COM&body=%3Ctype%20here%20question%3E" target='_blank' style="color:white;text-decoration:none;">Contact us</a> </button>
+          
+            <p class="text-center mt-2">Copyright.2023</p>
+        </div>
+    </div>
+</body>
+</html>

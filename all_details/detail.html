@@ -15,15 +15,14 @@
             object-fit: cover;
             margin-top:130px;
         }
-        h1 {
-            font-family: roboto;
-        }
   </style>
 
 <body>
-        <div class="container-sm">
+        <div class="container">
+          
                 {% include 'header.html'%}
           <img class="extra img-fluid" src="https://i.ibb.co/Kq0bHsk/marten-newhall-u-AFj-Fs-MS3-YY-unsplash.jpg"
+            alt="eric-prouzet-B3-UFXwc-Vbc4-unsplash" border="0">
 
                 <div style="margin-top:120px;">
                         <div class="mb-4">
@@ -45,15 +44,14 @@
                         <h4>Salary</h4>
                         <p>{{jobinfo.Salary}}</p>
                 </div>
+          {%include "application_form.html"%}
+           <div class="mb-3">
+            <button type="button" class="d-grid mx-auto btn btn-primary btn-lg"><a href="mailto:heyitsmevro@gmail.com?subject=Question%20about%20JOBDEKHO.COM&body=%3Ctype%20here%20question%3E" target='_blank' style="color:white;text-decoration:none;">Contact us</a> </button>
+          
+            <p class="text-center mt-2">Copyright.2023</p>
+        </div>
 
-                <div class="mb-3">
-                        <button type="button" class="d-grid mx-auto btn btn-primary btn-lg"><a
-                                        href="mailto:heyitsmevro@gmail.com?subject=Question%20about%20JOBDEKHO.COM&body=%3Ctype%20here%20question%3E"
-                                        target='_blank' style="color:white;text-decoration:none;">Contact us</a>
-                        </button>
 
-                        <p class="text-center mt-2">Copyright.2023</p>
-                </div>
         </div>
 </body>
 

@@ -36,3 +36,17 @@ def by_id(i):
       job_dict[column_name] = value
   dataBase.close()
   return job_dict
+
+def detail_add(name,email,linkedin,education,experience,applying):
+  dataBase = mysql.connector.connect(
+      host=os.environ['host_key'],
+      user=os.environ['admin_key'],
+      passwd=os.environ['pass_key'],
+      database='newdb'
+  )
+  object = dataBase.cursor()
+  sql = f'''INSERT INTO apply(name, email, linkedin, education, exprience, applying_for)VALUES ('{name}', '{email}','{linkedin}','{education}','{experience}','{applying}')'''
+  object.execute(sql)
+  dataBase.commit()
+  dataBase.close()
+  

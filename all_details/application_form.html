@@ -1,0 +1,36 @@
+<style>
+.extra_font{
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: large;
+}
+</style>
+<form action="/jobs/{{jobinfo['Id']}}/apply" method="post">
+<hr class="mt-5 mb-3" size="5%" color="black"/>
+<h1 style="font-family: Impact, Haettenschweiler, sans-serif;text-align: center;">Application Form</h1>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label extra_font">Name</label>
+  <input type="text" name="full_name" class="form-control"placeholder="Full Name">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label extra_font">Email address</label>
+  <input type="email" name="email" class="form-control"  placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label extra_font">Linkedin URL</label>
+  <input type="url" name="linkedin"  class="form-control"  placeholder="https://www.linkedin.com/in/name/">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label extra_font">Education</label>
+  <textarea class="form-control" name="education" rows="3"></textarea>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label extra_font">Work Experience</label>
+  <textarea class="form-control" name="experience" rows="3"></textarea>
+</div>
+<input class="btn btn-primary" type="submit" value="Submit">
+<hr size="5%" color="black"/>
+</form>
+
+
+
+
